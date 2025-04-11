@@ -1,10 +1,8 @@
 # assignment_1_pfm
 
-### Note: Do not run any of the python notebooks current in this project or
-### or the file "score_headlines_personal.py"
-### as they were previously used to either gather data, train the original
-### headline scoring model, or contain an original local
-### machine version of project code.
+### Note: Do not run any of the python notebooks current in this project or the file "score_headlines_personal.py" as 
+### they were previously used to either gather data, train the original headline scoring model, or contain an original 
+### local machine version of project code.
 
 This project takes a text file input of 
 provided headlines, converts them into their vector
