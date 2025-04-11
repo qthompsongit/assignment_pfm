@@ -25,9 +25,24 @@ of this environment variable
 Powershell:
 $env:TF_ENABLE_ONEDNN_OPTS = "0"
 
+Linux (inside of .bashrc):
+
+export TF_ENABLE_ONEDNN_OPTS=0
+Note: Please source .bashrc afterward to confirm the instantiation
+of this environment variable
+
+Powershell:
+
+$env:TF_ENABLE_ONEDNN_OPTS = "0"
+
 Before running this file, please make sure you run the following command:
+
 pip install -r requirements.txt
+
 or
+
 conda create -n a1_env python=3.10
+
 conda activate myenv
+
 pip install -r requirements.txt
