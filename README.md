@@ -46,3 +46,7 @@ conda create -n a1_env python=3.10
 conda activate myenv
 
 pip install -r requirements.txt
+
+NOTE: Please make sure that the programs and files in this directory have read, write, and execute privileges. You can ensure this by running the following command while inside this assignment's directory:
+
+chmod 777 .
