@@ -1,3 +1,4 @@
+# pylint: disable=invalid-name
 '''
 This is a test python file to check the functionality of pre-commit hooks.
 
