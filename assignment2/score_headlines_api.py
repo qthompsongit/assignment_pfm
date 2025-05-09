@@ -7,8 +7,10 @@ the tonality of newspaper headlines.
 Before running, be sure to create your own environment with
 the following commands:
 
-conda create -n a1_env python=3.10
-conda activate myenv
+conda create -n a2_env python=3.11
+
+conda activate a2_env
+
 pip install -r requirements.txt
 
 You can/should run this file with either of the following

@@ -17,3 +17,14 @@
 2025-05-09 16:22:08,375 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
 2025-05-09 16:22:08,375 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
 2025-05-09 16:22:08,375 - uvicorn.error - INFO - _serve:93 - Finished server process [23436]
+2025-05-09 18:31:19,870 - uvicorn.error - INFO - _serve:83 - Started server process [55456]
+2025-05-09 18:31:19,879 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-09 18:31:19,879 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-09 18:31:19,879 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-09 18:31:27,436 - uvicorn.access - INFO - send:476 - 127.0.0.1:64594 - "GET / HTTP/1.1" 404
+2025-05-09 18:31:27,637 - uvicorn.access - INFO - send:476 - 127.0.0.1:64594 - "GET /favicon.ico HTTP/1.1" 404
+2025-05-09 18:31:33,705 - uvicorn.access - INFO - send:476 - 127.0.0.1:64626 - "POST /score_headlines HTTP/1.1" 200
+2025-05-09 18:31:37,147 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-09 18:31:37,253 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-09 18:31:37,253 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-09 18:31:37,253 - uvicorn.error - INFO - _serve:93 - Finished server process [55456]

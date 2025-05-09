@@ -56,6 +56,10 @@ chmod 777 .
 
 # assignment_2
 
+*NOTE, please correctly set up your environment before running or install the packages in this directory with
+
+pip install -r requirement.txt
+
 To run this project, please use one of the following commands in the assignment2 directory:
 
 You can/should run this file with either of the following commands:

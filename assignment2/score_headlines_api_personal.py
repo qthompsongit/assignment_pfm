@@ -9,7 +9,7 @@ the following commands:
 
 conda create -n a2_env python=3.11
 
-conda activate myenv
+conda activate a2-env
 
 pip install -r requirements.txt
 
