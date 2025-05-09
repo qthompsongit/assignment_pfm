@@ -1,6 +1,6 @@
 # Headlines to sentiment
 
-One of our data scientists has built a sentiment model and your job is to deploy it. 
+One of our data scientists has built a sentiment model and your job is to deploy it.
 
 ### What has the data scientist done?
 The following zip file contains the contents of the project.
@@ -43,7 +43,7 @@ However, you may eventually want to transfer some files (perhaps test data) to t
 This command is available on windows and mac terminals.
 
 ### Code review
-Please make it a habit to run `pylint` (and, optionally, `black`) on your programs before committing changes to git. You don't have to follow every suggestion but you should be able to defend why you didn't. 
+Please make it a habit to run `pylint` (and, optionally, `black`) on your programs before committing changes to git. You don't have to follow every suggestion but you should be able to defend why you didn't.
 
 ### Code submission for grade
-You do not need to submit anything to canvas. I will check your code by actually running it on the linux server and inspecting the output. I will also review how you organized your code. 
+You do not need to submit anything to canvas. I will check your code by actually running it on the linux server and inspecting the output. I will also review how you organized your code.
