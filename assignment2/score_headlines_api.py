@@ -33,7 +33,7 @@ from pydantic import BaseModel
 
 os.makedirs("./logs", exist_ok=True)
 
-
+#Setting up logs
 with open("score_headline_logging.json", "r", encoding='utf-8') as f:
     json_config = json.load(f)
     logging.config.dictConfig(json_config)
@@ -41,14 +41,14 @@ with open("score_headline_logging.json", "r", encoding='utf-8') as f:
 
 fname = os.path.basename(__file__)
 log = logging.getLogger(fname) # <= This lines makes the logger name more useful
-
+#Loading the respective models
 log.info("Loading the sentence transformer model.")
 sentence_vector_transformer_model = SentenceTransformer("/opt/huggingface_models/all-MiniLM-L6-v2")
 log.info("Loading the headline tone reading model.")
 headline_scoring_model = joblib.load('svm.joblib')
 
 app = FastAPI()
-
+#Check the status of the webservice
 @app.get('/status')
 def status():
     '''
@@ -61,6 +61,7 @@ def status():
     return d
 
 # pylint: disable=too-few-public-methods
+# A class to store post request information to be used with our models
 class HeadlineData(BaseModel):
     '''
     A class which contains the expected values necessary to
@@ -73,6 +74,7 @@ class HeadlineData(BaseModel):
     headlines: List[str]
 
 @app.post('/score_headlines')
+#Score tonality of provided headlines
 def score_headlines(client_props: HeadlineData):
     '''
     A function which takes in a list of headlines provided by the client via
