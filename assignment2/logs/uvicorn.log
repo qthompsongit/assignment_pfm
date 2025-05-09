@@ -1,0 +1,19 @@
+2025-05-09 16:17:46,058 - uvicorn.error - ERROR - load:437 - Error loading ASGI app. Could not import module "score_headlines_api.py".
+2025-05-09 16:19:38,696 - uvicorn.error - INFO - _serve:83 - Started server process [35408]
+2025-05-09 16:19:38,697 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-09 16:19:38,697 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-09 16:19:38,700 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-09 16:19:45,936 - uvicorn.access - INFO - send:476 - 127.0.0.1:53133 - "POST /score_headlines HTTP/1.1" 200
+2025-05-09 16:20:10,487 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-09 16:20:10,587 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-09 16:20:10,587 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-09 16:20:10,587 - uvicorn.error - INFO - _serve:93 - Finished server process [35408]
+2025-05-09 16:21:32,740 - uvicorn.error - INFO - _serve:83 - Started server process [23436]
+2025-05-09 16:21:32,740 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-09 16:21:32,740 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-09 16:21:32,740 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-09 16:21:39,692 - uvicorn.access - INFO - send:476 - 127.0.0.1:53187 - "POST /score_headlines HTTP/1.1" 200
+2025-05-09 16:22:08,274 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-09 16:22:08,375 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-09 16:22:08,375 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-09 16:22:08,375 - uvicorn.error - INFO - _serve:93 - Finished server process [23436]
