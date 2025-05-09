@@ -43,7 +43,7 @@ fname = os.path.basename(__file__)
 log = logging.getLogger(fname) # <= This lines makes the logger name more useful
 
 log.info("Loading the sentence transformer model.")
-sentence_vector_transformer_model = SentenceTransformer("/opt/huggingface_models/all-MiniLM-L6-v2")
+sentence_vector_transformer_model = SentenceTransformer("all-MiniLM-L6-v2")
 log.info("Loading the headline tone reading model.")
 headline_scoring_model = joblib.load('svm.joblib')
 
