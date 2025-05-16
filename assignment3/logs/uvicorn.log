@@ -204,3 +204,60 @@
 2025-05-15 20:19:41,959 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
 2025-05-15 20:19:41,961 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
 2025-05-15 20:19:41,961 - uvicorn.error - INFO - _serve:93 - Finished server process [40956]
+2025-05-15 22:38:00,783 - uvicorn.error - INFO - _serve:83 - Started server process [13640]
+2025-05-15 22:38:00,784 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-15 22:38:00,784 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-15 22:38:00,785 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-15 22:39:14,396 - uvicorn.access - INFO - send:476 - 127.0.0.1:59437 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:14,397 - uvicorn.access - INFO - send:476 - 127.0.0.1:59438 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:14,624 - uvicorn.access - INFO - send:476 - 127.0.0.1:59440 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:14,624 - uvicorn.access - INFO - send:476 - 127.0.0.1:59439 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:14,896 - uvicorn.access - INFO - send:476 - 127.0.0.1:59441 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:14,943 - uvicorn.access - INFO - send:476 - 127.0.0.1:59442 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:49,582 - uvicorn.access - INFO - send:476 - 127.0.0.1:59481 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:49,627 - uvicorn.access - INFO - send:476 - 127.0.0.1:59482 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:53,426 - uvicorn.access - INFO - send:476 - 127.0.0.1:59483 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:53,470 - uvicorn.access - INFO - send:476 - 127.0.0.1:59484 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:08,724 - uvicorn.access - INFO - send:476 - 127.0.0.1:59497 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:08,761 - uvicorn.access - INFO - send:476 - 127.0.0.1:59498 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:15,844 - uvicorn.access - INFO - send:476 - 127.0.0.1:59502 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:16,041 - uvicorn.access - INFO - send:476 - 127.0.0.1:59503 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:16,315 - uvicorn.access - INFO - send:476 - 127.0.0.1:59504 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:24,877 - uvicorn.access - INFO - send:476 - 127.0.0.1:59522 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:24,924 - uvicorn.access - INFO - send:476 - 127.0.0.1:59523 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:33,007 - uvicorn.access - INFO - send:476 - 127.0.0.1:59527 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:33,055 - uvicorn.access - INFO - send:476 - 127.0.0.1:59528 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:33,094 - uvicorn.access - INFO - send:476 - 127.0.0.1:59529 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:48,532 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-15 22:40:48,625 - uvicorn.error - INFO - _serve:93 - Finished server process [13640]
+2025-05-15 22:40:48,685 - uvicorn.error - ERROR - send:134 - Traceback (most recent call last):
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 628, in run_until_complete
+    self.run_forever()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 699, in lifespan
+    await receive()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\queues.py", line 159, in get
+    await getter
+asyncio.exceptions.CancelledError
