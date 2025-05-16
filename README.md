@@ -2,6 +2,8 @@
 
 ### Note: Do not run any of the python notebooks current in this project or the file "score_headlines_personal.py" as they were previously used to either gather data, train the original headline scoring model, or contain an original local machine version of project code.
 
+
+# assignment1
 This project takes a text file input of
 provided headlines, converts them into their vector
 representation, feeds them into a svc model,
@@ -75,3 +77,26 @@ You can also run this assignment headless using "nohup" at the start of these co
 Be sure to kill -9 [pid] once you are done running the web service.
 
 The "send_score_request.py" is a python file used to test current and old (get_time, get_churn_probability) functionality of the webservice. This is not required for testing purposes, but it can be another vector to ensure everything runs as expected.
+
+
+# assignment3
+
+This project allows a user to run a streamlit application with
+the ability to communicate with a web service that
+labels the tonality of headlines provided to it.
+
+To run this file correctly, please use the following commmand:
+
+streamlit run score_headlines_streamlit.py --server.port 9081
+
+Make sure that the score_headlines_api service is running first by
+using one of the following commands:
+
+You can/should run this file with either of the following
+commands:
+
+fastapi dev score_headlines_api.py
+
+or
+
+uvicorn score_headlines_api:app --host 127.0.0.1 --port 8081

@@ -28,3 +28,10 @@
 2025-05-09 18:31:37,253 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
 2025-05-09 18:31:37,253 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
 2025-05-09 18:31:37,253 - uvicorn.error - INFO - _serve:93 - Finished server process [55456]
+2025-05-09 23:14:32,641 - uvicorn.error - INFO - _serve:83 - Started server process [19564]
+2025-05-09 23:14:32,656 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-09 23:14:32,656 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-09 23:14:32,656 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://0.0.0.0:8081 (Press CTRL+C to quit)
+2025-05-09 23:21:25,645 - uvicorn.access - INFO - send:476 - 127.0.0.1:57011 - "GET /status HTTP/1.1" 200
+2025-05-09 23:25:36,225 - uvicorn.access - INFO - send:476 - 127.0.0.1:57454 - "GET /status/ HTTP/1.1" 307
+2025-05-09 23:25:36,227 - uvicorn.access - INFO - send:476 - 127.0.0.1:57454 - "GET /status HTTP/1.1" 200
