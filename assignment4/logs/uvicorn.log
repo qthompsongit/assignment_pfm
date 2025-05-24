@@ -1,0 +1,263 @@
+2025-05-15 19:16:25,800 - uvicorn.error - INFO - _serve:83 - Started server process [36628]
+2025-05-15 19:16:25,800 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-15 19:16:25,800 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-15 19:16:25,800 - uvicorn.error - ERROR - startup:171 - [Errno 10048] error while attempting to bind on address ('127.0.0.1', 8081): only one usage of each socket address (protocol/network address/port) is normally permitted
+2025-05-15 19:16:25,800 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-15 19:16:25,800 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-15 19:18:09,058 - uvicorn.error - INFO - _serve:83 - Started server process [40956]
+2025-05-15 19:18:09,058 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-15 19:18:09,058 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-15 19:18:09,058 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-15 19:18:14,034 - uvicorn.access - INFO - send:476 - 127.0.0.1:62280 - "GET / HTTP/1.1" 404
+2025-05-15 19:18:14,479 - uvicorn.access - INFO - send:476 - 127.0.0.1:62280 - "GET /favicon.ico HTTP/1.1" 404
+2025-05-15 19:18:17,845 - uvicorn.access - INFO - send:476 - 127.0.0.1:62280 - "GET /status HTTP/1.1" 200
+2025-05-15 19:22:54,734 - uvicorn.access - INFO - send:476 - 127.0.0.1:62476 - "POST /status HTTP/1.1" 405
+2025-05-15 19:23:08,995 - uvicorn.access - INFO - send:476 - 127.0.0.1:62490 - "POST /status HTTP/1.1" 405
+2025-05-15 19:23:16,965 - uvicorn.access - INFO - send:476 - 127.0.0.1:62499 - "POST /status HTTP/1.1" 405
+2025-05-15 19:23:18,545 - uvicorn.access - INFO - send:476 - 127.0.0.1:62500 - "POST /status HTTP/1.1" 405
+2025-05-15 19:23:30,492 - uvicorn.access - INFO - send:476 - 127.0.0.1:62506 - "POST /status HTTP/1.1" 405
+2025-05-15 19:23:33,841 - uvicorn.access - INFO - send:476 - 127.0.0.1:62509 - "POST /status HTTP/1.1" 405
+2025-05-15 19:23:52,331 - uvicorn.access - INFO - send:476 - 127.0.0.1:62517 - "GET /status HTTP/1.1" 200
+2025-05-15 19:24:48,871 - uvicorn.access - INFO - send:476 - 127.0.0.1:62557 - "GET /status HTTP/1.1" 200
+2025-05-15 19:26:44,697 - uvicorn.access - INFO - send:476 - 127.0.0.1:62727 - "GET /status HTTP/1.1" 200
+2025-05-15 19:29:17,935 - uvicorn.access - INFO - send:476 - 127.0.0.1:62837 - "GET /status HTTP/1.1" 200
+2025-05-15 19:29:34,175 - uvicorn.access - INFO - send:476 - 127.0.0.1:62861 - "GET /status HTTP/1.1" 200
+2025-05-15 19:30:36,838 - uvicorn.access - INFO - send:476 - 127.0.0.1:62968 - "GET /status HTTP/1.1" 200
+2025-05-15 19:30:46,390 - uvicorn.access - INFO - send:476 - 127.0.0.1:62985 - "GET /status HTTP/1.1" 200
+2025-05-15 19:31:11,791 - uvicorn.access - INFO - send:476 - 127.0.0.1:63029 - "GET /status HTTP/1.1" 200
+2025-05-15 19:31:28,943 - uvicorn.access - INFO - send:476 - 127.0.0.1:63049 - "GET /status HTTP/1.1" 200
+2025-05-15 19:31:41,726 - uvicorn.access - INFO - send:476 - 127.0.0.1:63066 - "GET /status HTTP/1.1" 200
+2025-05-15 19:32:44,658 - uvicorn.access - INFO - send:476 - 127.0.0.1:63130 - "GET /status HTTP/1.1" 200
+2025-05-15 19:33:37,059 - uvicorn.access - INFO - send:476 - 127.0.0.1:63246 - "GET /status HTTP/1.1" 200
+2025-05-15 19:33:49,921 - uvicorn.access - INFO - send:476 - 127.0.0.1:63252 - "GET /status HTTP/1.1" 200
+2025-05-15 19:34:03,360 - uvicorn.access - INFO - send:476 - 127.0.0.1:63266 - "GET /status HTTP/1.1" 200
+2025-05-15 19:34:21,822 - uvicorn.access - INFO - send:476 - 127.0.0.1:63293 - "GET /status HTTP/1.1" 200
+2025-05-15 19:34:29,403 - uvicorn.access - INFO - send:476 - 127.0.0.1:63295 - "GET /status HTTP/1.1" 200
+2025-05-15 19:34:33,188 - uvicorn.access - INFO - send:476 - 127.0.0.1:63296 - "GET /status HTTP/1.1" 200
+2025-05-15 19:34:34,628 - uvicorn.access - INFO - send:476 - 127.0.0.1:63300 - "GET /status HTTP/1.1" 200
+2025-05-15 19:34:37,361 - uvicorn.access - INFO - send:476 - 127.0.0.1:63303 - "GET /status HTTP/1.1" 200
+2025-05-15 19:35:57,606 - uvicorn.access - INFO - send:476 - 127.0.0.1:63400 - "GET /status HTTP/1.1" 200
+2025-05-15 19:36:21,792 - uvicorn.access - INFO - send:476 - 127.0.0.1:63433 - "GET /status HTTP/1.1" 200
+2025-05-15 19:36:36,253 - uvicorn.access - INFO - send:476 - 127.0.0.1:63436 - "GET /status HTTP/1.1" 200
+2025-05-15 19:36:43,853 - uvicorn.access - INFO - send:476 - 127.0.0.1:63443 - "GET /status HTTP/1.1" 200
+2025-05-15 19:36:50,641 - uvicorn.access - INFO - send:476 - 127.0.0.1:63453 - "GET /status HTTP/1.1" 200
+2025-05-15 19:37:02,863 - uvicorn.access - INFO - send:476 - 127.0.0.1:63462 - "GET /status HTTP/1.1" 200
+2025-05-15 19:37:14,357 - uvicorn.access - INFO - send:476 - 127.0.0.1:63496 - "GET /status HTTP/1.1" 200
+2025-05-15 19:37:22,734 - uvicorn.access - INFO - send:476 - 127.0.0.1:63502 - "GET /status HTTP/1.1" 200
+2025-05-15 19:37:27,487 - uvicorn.access - INFO - send:476 - 127.0.0.1:63504 - "GET /status HTTP/1.1" 200
+2025-05-15 19:37:34,419 - uvicorn.access - INFO - send:476 - 127.0.0.1:63509 - "GET /status HTTP/1.1" 200
+2025-05-15 19:37:45,905 - uvicorn.access - INFO - send:476 - 127.0.0.1:63511 - "GET /status HTTP/1.1" 200
+2025-05-15 19:38:52,676 - uvicorn.access - INFO - send:476 - 127.0.0.1:63558 - "GET /status HTTP/1.1" 200
+2025-05-15 19:38:58,219 - uvicorn.access - INFO - send:476 - 127.0.0.1:63578 - "GET /status HTTP/1.1" 200
+2025-05-15 19:38:58,287 - uvicorn.access - INFO - send:476 - 127.0.0.1:63579 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:06,559 - uvicorn.access - INFO - send:476 - 127.0.0.1:63589 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:10,218 - uvicorn.access - INFO - send:476 - 127.0.0.1:63591 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:12,370 - uvicorn.access - INFO - send:476 - 127.0.0.1:63592 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:28,943 - uvicorn.access - INFO - send:476 - 127.0.0.1:63618 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:32,373 - uvicorn.access - INFO - send:476 - 127.0.0.1:63622 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:35,145 - uvicorn.access - INFO - send:476 - 127.0.0.1:63623 - "GET /status HTTP/1.1" 200
+2025-05-15 19:39:58,392 - uvicorn.access - INFO - send:476 - 127.0.0.1:63631 - "GET /status HTTP/1.1" 200
+2025-05-15 19:40:02,713 - uvicorn.access - INFO - send:476 - 127.0.0.1:63641 - "GET /status HTTP/1.1" 200
+2025-05-15 19:41:54,040 - uvicorn.access - INFO - send:476 - 127.0.0.1:63741 - "GET /status HTTP/1.1" 200
+2025-05-15 19:41:56,414 - uvicorn.access - INFO - send:476 - 127.0.0.1:63744 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:42:08,510 - uvicorn.access - INFO - send:476 - 127.0.0.1:63759 - "GET /status HTTP/1.1" 200
+2025-05-15 19:42:10,875 - uvicorn.access - INFO - send:476 - 127.0.0.1:63761 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:43:38,501 - uvicorn.access - INFO - send:476 - 127.0.0.1:63818 - "GET /status HTTP/1.1" 200
+2025-05-15 19:43:40,625 - uvicorn.access - INFO - send:476 - 127.0.0.1:63825 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:43:54,262 - uvicorn.access - INFO - send:476 - 127.0.0.1:63827 - "GET /status HTTP/1.1" 200
+2025-05-15 19:43:54,339 - uvicorn.access - INFO - send:476 - 127.0.0.1:63828 - "GET /status HTTP/1.1" 200
+2025-05-15 19:43:56,495 - uvicorn.access - INFO - send:476 - 127.0.0.1:63831 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:44:01,226 - uvicorn.access - INFO - send:476 - 127.0.0.1:63836 - "GET /status HTTP/1.1" 200
+2025-05-15 19:44:03,508 - uvicorn.access - INFO - send:476 - 127.0.0.1:63839 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:44:15,731 - uvicorn.access - INFO - send:476 - 127.0.0.1:63841 - "GET /status HTTP/1.1" 200
+2025-05-15 19:44:17,942 - uvicorn.access - INFO - send:476 - 127.0.0.1:63844 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:44:40,302 - uvicorn.access - INFO - send:476 - 127.0.0.1:63857 - "GET /status HTTP/1.1" 200
+2025-05-15 19:44:42,481 - uvicorn.access - INFO - send:476 - 127.0.0.1:63863 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:44:57,056 - uvicorn.access - INFO - send:476 - 127.0.0.1:63882 - "GET /status HTTP/1.1" 200
+2025-05-15 19:44:59,279 - uvicorn.access - INFO - send:476 - 127.0.0.1:63885 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:45:08,078 - uvicorn.access - INFO - send:476 - 127.0.0.1:63891 - "GET /status HTTP/1.1" 200
+2025-05-15 19:45:10,208 - uvicorn.access - INFO - send:476 - 127.0.0.1:63894 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:45:37,974 - uvicorn.access - INFO - send:476 - 127.0.0.1:63915 - "GET /status HTTP/1.1" 200
+2025-05-15 19:45:40,241 - uvicorn.access - INFO - send:476 - 127.0.0.1:63917 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:45:54,391 - uvicorn.access - INFO - send:476 - 127.0.0.1:63932 - "GET /status HTTP/1.1" 200
+2025-05-15 19:45:56,767 - uvicorn.access - INFO - send:476 - 127.0.0.1:63938 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:46:18,222 - uvicorn.access - INFO - send:476 - 127.0.0.1:63947 - "GET /status HTTP/1.1" 200
+2025-05-15 19:46:20,439 - uvicorn.access - INFO - send:476 - 127.0.0.1:63955 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:46:43,400 - uvicorn.access - INFO - send:476 - 127.0.0.1:63993 - "GET /status HTTP/1.1" 200
+2025-05-15 19:46:43,450 - uvicorn.access - INFO - send:476 - 127.0.0.1:63994 - "GET /status HTTP/1.1" 200
+2025-05-15 19:46:45,842 - uvicorn.access - INFO - send:476 - 127.0.0.1:64000 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:47:06,495 - uvicorn.access - INFO - send:476 - 127.0.0.1:64031 - "GET /status HTTP/1.1" 200
+2025-05-15 19:47:08,817 - uvicorn.access - INFO - send:476 - 127.0.0.1:64038 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:47:20,267 - uvicorn.access - INFO - send:476 - 127.0.0.1:64048 - "GET /status HTTP/1.1" 200
+2025-05-15 19:47:22,433 - uvicorn.access - INFO - send:476 - 127.0.0.1:64050 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:47:43,152 - uvicorn.access - INFO - send:476 - 127.0.0.1:64069 - "GET /status HTTP/1.1" 200
+2025-05-15 19:47:45,381 - uvicorn.access - INFO - send:476 - 127.0.0.1:64072 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:47:57,199 - uvicorn.access - INFO - send:476 - 127.0.0.1:64074 - "GET /status HTTP/1.1" 200
+2025-05-15 19:47:59,364 - uvicorn.access - INFO - send:476 - 127.0.0.1:64077 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:48:28,769 - uvicorn.access - INFO - send:476 - 127.0.0.1:64093 - "GET /status HTTP/1.1" 200
+2025-05-15 19:48:30,989 - uvicorn.access - INFO - send:476 - 127.0.0.1:64099 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:49:12,944 - uvicorn.access - INFO - send:476 - 127.0.0.1:64179 - "GET /status HTTP/1.1" 200
+2025-05-15 19:49:15,025 - uvicorn.access - INFO - send:476 - 127.0.0.1:64186 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:49:20,848 - uvicorn.access - INFO - send:476 - 127.0.0.1:64199 - "GET /status HTTP/1.1" 200
+2025-05-15 19:49:22,892 - uvicorn.access - INFO - send:476 - 127.0.0.1:64208 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:49:38,189 - uvicorn.access - INFO - send:476 - 127.0.0.1:64226 - "GET /status HTTP/1.1" 200
+2025-05-15 19:49:40,235 - uvicorn.access - INFO - send:476 - 127.0.0.1:64234 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:49:43,190 - uvicorn.access - INFO - send:476 - 127.0.0.1:64235 - "GET /status HTTP/1.1" 200
+2025-05-15 19:49:45,426 - uvicorn.access - INFO - send:476 - 127.0.0.1:64237 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 19:49:49,779 - uvicorn.access - INFO - send:476 - 127.0.0.1:64239 - "GET /status HTTP/1.1" 200
+2025-05-15 19:49:52,032 - uvicorn.access - INFO - send:476 - 127.0.0.1:64241 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:01:34,070 - uvicorn.access - INFO - send:476 - 127.0.0.1:65371 - "GET /status HTTP/1.1" 200
+2025-05-15 20:01:36,132 - uvicorn.access - INFO - send:476 - 127.0.0.1:65374 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:01:49,599 - uvicorn.access - INFO - send:476 - 127.0.0.1:65413 - "GET /status HTTP/1.1" 200
+2025-05-15 20:01:51,629 - uvicorn.access - INFO - send:476 - 127.0.0.1:65418 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:02:03,281 - uvicorn.access - INFO - send:476 - 127.0.0.1:65433 - "GET /status HTTP/1.1" 200
+2025-05-15 20:02:05,335 - uvicorn.access - INFO - send:476 - 127.0.0.1:65437 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:04:30,611 - uvicorn.access - INFO - send:476 - 127.0.0.1:49329 - "GET /status HTTP/1.1" 200
+2025-05-15 20:04:32,655 - uvicorn.access - INFO - send:476 - 127.0.0.1:49335 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:04:41,060 - uvicorn.access - INFO - send:476 - 127.0.0.1:49350 - "GET /status HTTP/1.1" 200
+2025-05-15 20:04:43,112 - uvicorn.access - INFO - send:476 - 127.0.0.1:49352 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:05:04,141 - uvicorn.access - INFO - send:476 - 127.0.0.1:49372 - "GET /status HTTP/1.1" 200
+2025-05-15 20:05:06,448 - uvicorn.access - INFO - send:476 - 127.0.0.1:49374 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:05:14,135 - uvicorn.access - INFO - send:476 - 127.0.0.1:49375 - "GET /status HTTP/1.1" 200
+2025-05-15 20:05:16,252 - uvicorn.access - INFO - send:476 - 127.0.0.1:49377 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:05:23,430 - uvicorn.access - INFO - send:476 - 127.0.0.1:49381 - "GET /status HTTP/1.1" 200
+2025-05-15 20:05:25,754 - uvicorn.access - INFO - send:476 - 127.0.0.1:49383 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:05:32,730 - uvicorn.access - INFO - send:476 - 127.0.0.1:49385 - "GET /status HTTP/1.1" 200
+2025-05-15 20:05:34,764 - uvicorn.access - INFO - send:476 - 127.0.0.1:49397 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:09:01,304 - uvicorn.access - INFO - send:476 - 127.0.0.1:49828 - "GET /status HTTP/1.1" 200
+2025-05-15 20:09:03,344 - uvicorn.access - INFO - send:476 - 127.0.0.1:49844 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:09:58,195 - uvicorn.access - INFO - send:476 - 127.0.0.1:49891 - "GET /status HTTP/1.1" 200
+2025-05-15 20:10:03,602 - uvicorn.access - INFO - send:476 - 127.0.0.1:49899 - "GET /status HTTP/1.1" 200
+2025-05-15 20:10:18,838 - uvicorn.access - INFO - send:476 - 127.0.0.1:49908 - "GET /status HTTP/1.1" 200
+2025-05-15 20:10:29,543 - uvicorn.access - INFO - send:476 - 127.0.0.1:49917 - "GET /status HTTP/1.1" 200
+2025-05-15 20:10:34,994 - uvicorn.access - INFO - send:476 - 127.0.0.1:49921 - "GET /status HTTP/1.1" 200
+2025-05-15 20:11:03,076 - uvicorn.access - INFO - send:476 - 127.0.0.1:49964 - "GET /status HTTP/1.1" 200
+2025-05-15 20:11:05,117 - uvicorn.access - INFO - send:476 - 127.0.0.1:49969 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:11:09,496 - uvicorn.access - INFO - send:476 - 127.0.0.1:49977 - "GET /status HTTP/1.1" 200
+2025-05-15 20:11:11,730 - uvicorn.access - INFO - send:476 - 127.0.0.1:49983 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:11:24,910 - uvicorn.access - INFO - send:476 - 127.0.0.1:49988 - "GET /status HTTP/1.1" 200
+2025-05-15 20:11:27,133 - uvicorn.access - INFO - send:476 - 127.0.0.1:49991 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:11:34,040 - uvicorn.access - INFO - send:476 - 127.0.0.1:49996 - "GET /status HTTP/1.1" 200
+2025-05-15 20:11:36,220 - uvicorn.access - INFO - send:476 - 127.0.0.1:49999 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:11:36,868 - uvicorn.access - INFO - send:476 - 127.0.0.1:50060 - "GET /status HTTP/1.1" 200
+2025-05-15 20:11:39,165 - uvicorn.access - INFO - send:476 - 127.0.0.1:50069 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:12:07,884 - uvicorn.access - INFO - send:476 - 127.0.0.1:50094 - "GET /status HTTP/1.1" 200
+2025-05-15 20:12:10,095 - uvicorn.access - INFO - send:476 - 127.0.0.1:50105 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:12:11,961 - uvicorn.access - INFO - send:476 - 127.0.0.1:50110 - "GET /status HTTP/1.1" 200
+2025-05-15 20:12:14,293 - uvicorn.access - INFO - send:476 - 127.0.0.1:50112 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:12:23,421 - uvicorn.access - INFO - send:476 - 127.0.0.1:50116 - "GET /status HTTP/1.1" 200
+2025-05-15 20:12:25,581 - uvicorn.access - INFO - send:476 - 127.0.0.1:50118 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:12:31,077 - uvicorn.access - INFO - send:476 - 127.0.0.1:50119 - "GET /status HTTP/1.1" 200
+2025-05-15 20:12:33,230 - uvicorn.access - INFO - send:476 - 127.0.0.1:50124 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:12:33,367 - uvicorn.access - INFO - send:476 - 127.0.0.1:50125 - "GET /status HTTP/1.1" 200
+2025-05-15 20:12:35,661 - uvicorn.access - INFO - send:476 - 127.0.0.1:50134 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:13:13,581 - uvicorn.access - INFO - send:476 - 127.0.0.1:50166 - "GET /status HTTP/1.1" 200
+2025-05-15 20:13:16,009 - uvicorn.access - INFO - send:476 - 127.0.0.1:50175 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:13:44,175 - uvicorn.access - INFO - send:476 - 127.0.0.1:50185 - "GET /status HTTP/1.1" 200
+2025-05-15 20:13:46,421 - uvicorn.access - INFO - send:476 - 127.0.0.1:50190 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:13:46,737 - uvicorn.access - INFO - send:476 - 127.0.0.1:50191 - "GET /status HTTP/1.1" 200
+2025-05-15 20:14:19,603 - uvicorn.access - INFO - send:476 - 127.0.0.1:50208 - "GET /status HTTP/1.1" 200
+2025-05-15 20:14:20,542 - uvicorn.access - INFO - send:476 - 127.0.0.1:50213 - "GET /status HTTP/1.1" 200
+2025-05-15 20:14:21,703 - uvicorn.access - INFO - send:476 - 127.0.0.1:50214 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:14:28,208 - uvicorn.access - INFO - send:476 - 127.0.0.1:50218 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:23,931 - uvicorn.access - INFO - send:476 - 127.0.0.1:50420 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:26,084 - uvicorn.access - INFO - send:476 - 127.0.0.1:50430 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:15:26,947 - uvicorn.access - INFO - send:476 - 127.0.0.1:50434 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:27,027 - uvicorn.access - INFO - send:476 - 127.0.0.1:50435 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:29,130 - uvicorn.access - INFO - send:476 - 127.0.0.1:50437 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:15:32,969 - uvicorn.access - INFO - send:476 - 127.0.0.1:50443 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:35,154 - uvicorn.access - INFO - send:476 - 127.0.0.1:50445 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:15:45,420 - uvicorn.access - INFO - send:476 - 127.0.0.1:50456 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:45,561 - uvicorn.access - INFO - send:476 - 127.0.0.1:50457 - "GET /status HTTP/1.1" 200
+2025-05-15 20:15:47,840 - uvicorn.access - INFO - send:476 - 127.0.0.1:50462 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:16:39,625 - uvicorn.access - INFO - send:476 - 127.0.0.1:50503 - "GET /status HTTP/1.1" 200
+2025-05-15 20:16:41,759 - uvicorn.access - INFO - send:476 - 127.0.0.1:50517 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:16:44,872 - uvicorn.access - INFO - send:476 - 127.0.0.1:50521 - "GET /status HTTP/1.1" 200
+2025-05-15 20:16:45,027 - uvicorn.access - INFO - send:476 - 127.0.0.1:50522 - "GET /status HTTP/1.1" 200
+2025-05-15 20:16:47,273 - uvicorn.access - INFO - send:476 - 127.0.0.1:50524 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:16:52,505 - uvicorn.access - INFO - send:476 - 127.0.0.1:50533 - "GET /status HTTP/1.1" 200
+2025-05-15 20:16:54,791 - uvicorn.access - INFO - send:476 - 127.0.0.1:50535 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:17:05,571 - uvicorn.access - INFO - send:476 - 127.0.0.1:50545 - "GET /status HTTP/1.1" 200
+2025-05-15 20:17:07,850 - uvicorn.access - INFO - send:476 - 127.0.0.1:50547 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:17:14,802 - uvicorn.access - INFO - send:476 - 127.0.0.1:50554 - "GET /status HTTP/1.1" 200
+2025-05-15 20:17:17,173 - uvicorn.access - INFO - send:476 - 127.0.0.1:50556 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:17:19,077 - uvicorn.access - INFO - send:476 - 127.0.0.1:50557 - "GET /status HTTP/1.1" 200
+2025-05-15 20:17:19,215 - uvicorn.access - INFO - send:476 - 127.0.0.1:50558 - "GET /status HTTP/1.1" 200
+2025-05-15 20:17:21,409 - uvicorn.access - INFO - send:476 - 127.0.0.1:50563 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:17:27,845 - uvicorn.access - INFO - send:476 - 127.0.0.1:50568 - "GET /status HTTP/1.1" 200
+2025-05-15 20:17:30,043 - uvicorn.access - INFO - send:476 - 127.0.0.1:50571 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:18:39,523 - uvicorn.access - INFO - send:476 - 127.0.0.1:50694 - "GET /status HTTP/1.1" 200
+2025-05-15 20:18:41,836 - uvicorn.access - INFO - send:476 - 127.0.0.1:50707 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:18:42,443 - uvicorn.access - INFO - send:476 - 127.0.0.1:50711 - "GET /status HTTP/1.1" 200
+2025-05-15 20:18:42,519 - uvicorn.access - INFO - send:476 - 127.0.0.1:50712 - "GET /status HTTP/1.1" 200
+2025-05-15 20:18:44,853 - uvicorn.access - INFO - send:476 - 127.0.0.1:50717 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:19:08,812 - uvicorn.access - INFO - send:476 - 127.0.0.1:50746 - "GET /status HTTP/1.1" 200
+2025-05-15 20:19:11,159 - uvicorn.access - INFO - send:476 - 127.0.0.1:50748 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:19:16,448 - uvicorn.access - INFO - send:476 - 127.0.0.1:50760 - "GET /status HTTP/1.1" 200
+2025-05-15 20:19:18,725 - uvicorn.access - INFO - send:476 - 127.0.0.1:50768 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:19:20,513 - uvicorn.access - INFO - send:476 - 127.0.0.1:50769 - "GET /status HTTP/1.1" 200
+2025-05-15 20:19:20,649 - uvicorn.access - INFO - send:476 - 127.0.0.1:50770 - "GET /status HTTP/1.1" 200
+2025-05-15 20:19:22,783 - uvicorn.access - INFO - send:476 - 127.0.0.1:50775 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:19:30,052 - uvicorn.access - INFO - send:476 - 127.0.0.1:50776 - "GET /status HTTP/1.1" 200
+2025-05-15 20:19:32,219 - uvicorn.access - INFO - send:476 - 127.0.0.1:50782 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 20:19:41,852 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-15 20:19:41,959 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-15 20:19:41,961 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-15 20:19:41,961 - uvicorn.error - INFO - _serve:93 - Finished server process [40956]
+2025-05-15 22:38:00,783 - uvicorn.error - INFO - _serve:83 - Started server process [13640]
+2025-05-15 22:38:00,784 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-15 22:38:00,784 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-15 22:38:00,785 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-15 22:39:14,396 - uvicorn.access - INFO - send:476 - 127.0.0.1:59437 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:14,397 - uvicorn.access - INFO - send:476 - 127.0.0.1:59438 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:14,624 - uvicorn.access - INFO - send:476 - 127.0.0.1:59440 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:14,624 - uvicorn.access - INFO - send:476 - 127.0.0.1:59439 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:14,896 - uvicorn.access - INFO - send:476 - 127.0.0.1:59441 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:14,943 - uvicorn.access - INFO - send:476 - 127.0.0.1:59442 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:49,582 - uvicorn.access - INFO - send:476 - 127.0.0.1:59481 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:49,627 - uvicorn.access - INFO - send:476 - 127.0.0.1:59482 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:39:53,426 - uvicorn.access - INFO - send:476 - 127.0.0.1:59483 - "GET /status HTTP/1.1" 200
+2025-05-15 22:39:53,470 - uvicorn.access - INFO - send:476 - 127.0.0.1:59484 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:08,724 - uvicorn.access - INFO - send:476 - 127.0.0.1:59497 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:08,761 - uvicorn.access - INFO - send:476 - 127.0.0.1:59498 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:15,844 - uvicorn.access - INFO - send:476 - 127.0.0.1:59502 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:16,041 - uvicorn.access - INFO - send:476 - 127.0.0.1:59503 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:16,315 - uvicorn.access - INFO - send:476 - 127.0.0.1:59504 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:24,877 - uvicorn.access - INFO - send:476 - 127.0.0.1:59522 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:24,924 - uvicorn.access - INFO - send:476 - 127.0.0.1:59523 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:33,007 - uvicorn.access - INFO - send:476 - 127.0.0.1:59527 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:33,055 - uvicorn.access - INFO - send:476 - 127.0.0.1:59528 - "GET /status HTTP/1.1" 200
+2025-05-15 22:40:33,094 - uvicorn.access - INFO - send:476 - 127.0.0.1:59529 - "POST /score_headlines HTTP/1.1" 200
+2025-05-15 22:40:48,532 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-15 22:40:48,625 - uvicorn.error - INFO - _serve:93 - Finished server process [13640]
+2025-05-15 22:40:48,685 - uvicorn.error - ERROR - send:134 - Traceback (most recent call last):
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 628, in run_until_complete
+    self.run_forever()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\windows_events.py", line 316, in run_forever
+    super().run_forever()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 595, in run_forever
+    self._run_once()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\base_events.py", line 1881, in _run_once
+    handle._run()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\server.py", line 69, in serve
+    with self.capture_signals():
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\contextlib.py", line 142, in __exit__
+    next(self.gen)
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\server.py", line 330, in capture_signals
+    signal.raise_signal(captured_signal)
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\starlette\routing.py", line 699, in lifespan
+    await receive()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\site-packages\uvicorn\lifespan\on.py", line 137, in receive
+    return await self.receive_queue.get()
+  File "C:\Users\quinn\AppData\Local\Programs\Python\Python310\lib\asyncio\queues.py", line 159, in get
+    await getter
+asyncio.exceptions.CancelledError
