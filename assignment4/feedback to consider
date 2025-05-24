@@ -1,0 +1,6 @@
+Feedback From 5/21/2025
+- Use argparse or similar library than doing it yourself
+- Add spaces between code methods/other functions
+- Add in string formatters for easier use/readability for datetime and logging
+- Avoid extra commenting when unnecessary (prior to each function for apps for fastapi)
+- If requirements aren't met, its okay to crash rather than pull from the internet
