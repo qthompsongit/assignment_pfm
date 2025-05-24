@@ -49,7 +49,7 @@ with open("score_headline_logging.json", "r", encoding="utf-8") as f:
 
 
 fname = os.path.basename(__file__)
-log = logging.getLogger(fname)  # <= This lines makes the logger name more useful
+log = logging.getLogger(fname)
 
 log.info("Loading the sentence transformer model.")
 sentence_vector_transformer_model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -71,7 +71,6 @@ def status():
     return d
 
 
-# pylint: disable=too-few-public-methods
 class HeadlineData(BaseModel):
     """
     A class which contains the expected values necessary to
