@@ -53,7 +53,15 @@ fname = os.path.basename(__file__)
 log = logging.getLogger(fname)
 
 log.info("Loading the sentence transformer model.")
-sentence_vector_transformer_model = SentenceTransformer("/opt/huggingface_models/all-MiniLM-L6-v2")
+
+model_path = "/opt/huggingface_models/all-MiniLM-L6-v2"
+
+if os.path.exists(model_path):
+    sentence_vector_transformer_model = SentenceTransformer(model_path)
+else:
+    # Fallback: download from Hugging Face, ONLY NECESSARY
+    # IF THE MODEL DOES NOT EXIST ON THE SYSTEM RUNNING THIS PROGRAM
+    sentence_vector_transformer_model = SentenceTransformer("all-MiniLM-L6-v2")
 log.info("Loading the headline tone reading model.")
 headline_scoring_model = joblib.load("svm.joblib")
 
