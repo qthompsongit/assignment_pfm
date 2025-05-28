@@ -34,7 +34,7 @@ jobs:
         uses: docker/build-push-action@v6
         with:
             context: ./assignment4
-            file: Dockerfile_personal
+            file: ./Dockerfile_personal
             push: ${{ github.event_name != 'pull_request' }}
             tags: |
                 ${{ secrets.DOCKER_USERNAME }}/score_headlines_app_personal:${{ env.TIMESTAMP }}
