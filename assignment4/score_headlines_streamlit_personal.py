@@ -29,7 +29,7 @@ st.markdown("# Scoring Headlines")
 
 st.markdown("""
             # Current Status""")
-response = requests.get(url="http://104.236.229.208:8081/status", timeout=10)
+response = requests.get(url="http://127.0.0.1:8081/status", timeout=10)
 st.write(response.json()['status'])
 
 
@@ -65,7 +65,7 @@ if st.button("+ Add more elements"):
 
 st.markdown("""Your headlines, and their sentiments, will be displayed below:""")
 
-response = requests.post(url="http://104.236.229.208:8081/score_headlines",\
+response = requests.post(url="http://127.0.0.1:8081/score_headlines",\
     json = {'headlines':st.session_state['headline_list']}, timeout=10)
 headline_tonalities = response.json()['labels']
 
