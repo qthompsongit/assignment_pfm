@@ -54,10 +54,10 @@ log = logging.getLogger(fname)
 
 log.info("Loading the sentence transformer model.")
 
-model_path = "/opt/huggingface_models/all-MiniLM-L6-v2"
+MODEL_PATH = "/opt/huggingface_models/all-MiniLM-L6-v2"
 
-if os.path.exists(model_path):
-    sentence_vector_transformer_model = SentenceTransformer(model_path)
+if os.path.exists(MODEL_PATH):
+    sentence_vector_transformer_model = SentenceTransformer(MODEL_PATH)
 else:
     # Fallback: download from Hugging Face, ONLY NECESSARY
     # IF THE MODEL DOES NOT EXIST ON THE SYSTEM RUNNING THIS PROGRAM
