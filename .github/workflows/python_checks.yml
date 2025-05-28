@@ -40,4 +40,7 @@ jobs:
       run: mypy assignment4
 
     - name: Run tests
-      run: pytest assignment4/tests
+      run: |
+        cd assignment4
+        pytest tests/test_app.py
+        cd ..
