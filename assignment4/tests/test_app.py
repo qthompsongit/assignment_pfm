@@ -1,4 +1,4 @@
-# pylint: disable=E0401
+# pylint: disable=wrong-import-position
 """
 This file contains the tests necessary to push code to main,
 and eventually production, for this assignment.
@@ -12,10 +12,7 @@ import os
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from fastapi.testclient import TestClient  # pylint: disable=wrong-import-position
-from score_headlines_api_personal import app  # pylint: disable=wrong-import-position
-
-
-
+from score_headlines_api_personal import app  # pylint: disable=wrong-import-position, import-error
 
 client = TestClient(app)
 
