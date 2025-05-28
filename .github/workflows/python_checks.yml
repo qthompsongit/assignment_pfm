@@ -26,7 +26,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install -r requirements_fixed.txt
+        python -m pip install pylint
+        python -m pip install mypy
+        python -m pip install pytest
         python -m pip install --upgrade pip
+
 
     - name: Run pylint
       run: |
