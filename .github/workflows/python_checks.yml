@@ -34,7 +34,7 @@ jobs:
         pip install pylint mypy pytest
 
     - name: Run pylint
-      run: pylint --rcfile=.pylintrc assignment4/ tests/
+      run: pylint --rcfile=.pylintrc assignment4/ assignment4/tests/
 
     - name: Run mypy
       run: mypy assignment4
