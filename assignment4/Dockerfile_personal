@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+COPY requirements_fixed.txt ./
+RUN pip install --prefer-binary --no-cache-dir -r requirements_fixed.txt
+
+COPY . .
+
+RUN chmod +x startupfile.sh
+
+CMD ["./startupfile.sh"]
