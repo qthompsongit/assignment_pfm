@@ -32,6 +32,7 @@ import os
 import logging
 import logging.config
 import json
+from datetime import date
 
 
 import joblib
@@ -115,4 +116,17 @@ def score_headlines(client_props: HeadlineData):
             scoring_model_prediction,
         )
         my_headline_predictions.append(scoring_model_prediction[0])
+
+    today_str = date.today().strftime("%Y_%m_%d")
+    existing_file_path_check = f"headline_scores_{today_str}.txt"
+
+
+    if os.path.exists(f"./results/{existing_file_path_check}"):
+        with open(f"./results/{existing_file_path_check}", "a+", encoding="utf-8") as file:
+            for prediction_index, prediction_value in enumerate(my_headline_predictions, start=0):
+                file.write(str(prediction_value) + "," + str(client_props.headlines[prediction_index])+"\n")
+    else:
+        with open(f"./results/{existing_file_path_check}", "w", encoding="utf-8") as file:
+            for prediction_index, prediction_value in enumerate(my_headline_predictions, start=0):
+                file.write(str(prediction_value) + "," + str(client_props.headlines[prediction_index])+"\n")
     return {"labels": my_headline_predictions}

@@ -27,3 +27,504 @@
 2025-05-27 21:59:20,097 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
 2025-05-27 21:59:20,097 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
 2025-05-27 21:59:20,097 - uvicorn.error - INFO - _serve:92 - Finished server process [41504]
+2025-05-28 00:09:46,783 - uvicorn.error - INFO - _serve:83 - Started server process [21608]
+2025-05-28 00:09:46,784 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-28 00:09:46,784 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-28 00:09:46,784 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-28 00:09:52,374 - uvicorn.access - INFO - send:473 - 127.0.0.1:54143 - "GET /status HTTP/1.1" 200
+2025-05-28 00:09:52,466 - uvicorn.access - INFO - send:473 - 127.0.0.1:54144 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:09:52,466 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 120, in score_headlines
+    existing_file_path_check = (f"headline_scores_{headline_source}_{str(datetime.date.today().year)}_{str(datetime.date.today().month)}_{str(datetime.date.today().day)}.txt")
+                                                   ^^^^^^^^^^^^^^^
+NameError: name 'headline_source' is not defined
+2025-05-28 00:09:58,231 - uvicorn.access - INFO - send:473 - 127.0.0.1:54151 - "GET /status HTTP/1.1" 200
+2025-05-28 00:09:58,265 - uvicorn.access - INFO - send:473 - 127.0.0.1:54152 - "GET /status HTTP/1.1" 200
+2025-05-28 00:09:58,302 - uvicorn.access - INFO - send:473 - 127.0.0.1:54153 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:09:58,302 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 120, in score_headlines
+    existing_file_path_check = (f"headline_scores_{headline_source}_{str(datetime.date.today().year)}_{str(datetime.date.today().month)}_{str(datetime.date.today().day)}.txt")
+                                                   ^^^^^^^^^^^^^^^
+NameError: name 'headline_source' is not defined
+2025-05-28 00:11:02,079 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-28 00:11:02,187 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-28 00:11:02,187 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-28 00:11:02,187 - uvicorn.error - INFO - _serve:93 - Finished server process [21608]
+2025-05-28 00:11:45,586 - uvicorn.error - INFO - _serve:83 - Started server process [39448]
+2025-05-28 00:11:45,586 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-28 00:11:45,586 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-28 00:11:45,587 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-28 00:11:52,919 - uvicorn.access - INFO - send:473 - 127.0.0.1:54272 - "GET /status HTTP/1.1" 200
+2025-05-28 00:11:52,961 - uvicorn.access - INFO - send:473 - 127.0.0.1:54273 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:11:52,961 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 120, in score_headlines
+    existing_file_path_check = (f"headline_scores_{str(datetime.date.today().year)}_{str(datetime.date.today().month)}_{str(datetime.date.today().day)}.txt")
+                                                       ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'method_descriptor' object has no attribute 'today'
+2025-05-28 00:11:53,142 - uvicorn.access - INFO - send:473 - 127.0.0.1:54274 - "GET /status HTTP/1.1" 200
+2025-05-28 00:11:53,184 - uvicorn.access - INFO - send:473 - 127.0.0.1:54275 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:11:53,185 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 120, in score_headlines
+    existing_file_path_check = (f"headline_scores_{str(datetime.date.today().year)}_{str(datetime.date.today().month)}_{str(datetime.date.today().day)}.txt")
+                                                       ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'method_descriptor' object has no attribute 'today'
+2025-05-28 00:12:34,780 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-28 00:12:34,887 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-28 00:12:34,887 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-28 00:12:34,887 - uvicorn.error - INFO - _serve:93 - Finished server process [39448]
+2025-05-28 00:13:04,329 - uvicorn.error - INFO - _serve:83 - Started server process [18412]
+2025-05-28 00:13:04,329 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-28 00:13:04,330 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-28 00:13:04,330 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-28 00:13:04,533 - uvicorn.access - INFO - send:473 - 127.0.0.1:54404 - "GET /status HTTP/1.1" 200
+2025-05-28 00:13:04,572 - uvicorn.access - INFO - send:473 - 127.0.0.1:54405 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:13:04,573 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 133, in score_headlines
+    for prediction_index, prediction_value in enumerate(model_predictions, start=0):
+                                                        ^^^^^^^^^^^^^^^^^
+NameError: name 'model_predictions' is not defined
+2025-05-28 00:13:08,562 - uvicorn.access - INFO - send:473 - 127.0.0.1:54407 - "GET /status HTTP/1.1" 200
+2025-05-28 00:13:08,588 - uvicorn.access - INFO - send:473 - 127.0.0.1:54408 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:13:08,588 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 129, in score_headlines
+    for prediction_index, prediction_value in enumerate(model_predictions, start=0):
+                                                        ^^^^^^^^^^^^^^^^^
+NameError: name 'model_predictions' is not defined
+2025-05-28 00:13:10,544 - uvicorn.access - INFO - send:473 - 127.0.0.1:54413 - "GET /status HTTP/1.1" 200
+2025-05-28 00:13:10,570 - uvicorn.access - INFO - send:473 - 127.0.0.1:54414 - "POST /score_headlines HTTP/1.1" 500
+2025-05-28 00:13:10,571 - uvicorn.error - ERROR - run_asgi:408 - Exception in ASGI application
+Traceback (most recent call last):
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\protocols\http\h11_impl.py", line 403, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\uvicorn\middleware\proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\applications.py", line 1054, in __call__
+    await super().__call__(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 187, in __call__
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "c:\Users\quinn\OneDrive\Desktop\python for ml work\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\quinn\OneDrive\Desktop\python for ml work\assignment_pfm\assignment4\score_headlines_api_personal.py", line 129, in score_headlines
+    for prediction_index, prediction_value in enumerate(model_predictions, start=0):
+                                                        ^^^^^^^^^^^^^^^^^
+NameError: name 'model_predictions' is not defined
+2025-05-28 00:14:20,703 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-28 00:14:20,812 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-28 00:14:20,812 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-28 00:14:20,812 - uvicorn.error - INFO - _serve:93 - Finished server process [18412]
+2025-05-28 00:14:31,311 - uvicorn.error - INFO - _serve:83 - Started server process [51752]
+2025-05-28 00:14:31,312 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-28 00:14:31,312 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-28 00:14:31,313 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-28 00:14:34,527 - uvicorn.access - INFO - send:473 - 127.0.0.1:54460 - "GET /status HTTP/1.1" 200
+2025-05-28 00:14:34,586 - uvicorn.access - INFO - send:473 - 127.0.0.1:54461 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:14:37,057 - uvicorn.access - INFO - send:473 - 127.0.0.1:54463 - "GET /status HTTP/1.1" 200
+2025-05-28 00:14:37,109 - uvicorn.access - INFO - send:473 - 127.0.0.1:54464 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:14:51,629 - uvicorn.access - INFO - send:473 - 127.0.0.1:54465 - "GET /status HTTP/1.1" 200
+2025-05-28 00:14:51,674 - uvicorn.access - INFO - send:473 - 127.0.0.1:54466 - "GET /status HTTP/1.1" 200
+2025-05-28 00:14:51,737 - uvicorn.access - INFO - send:473 - 127.0.0.1:54467 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:14:53,433 - uvicorn.access - INFO - send:473 - 127.0.0.1:54469 - "GET /status HTTP/1.1" 200
+2025-05-28 00:14:53,471 - uvicorn.access - INFO - send:473 - 127.0.0.1:54470 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:15:48,621 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-28 00:15:48,729 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-28 00:15:48,729 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-28 00:15:48,729 - uvicorn.error - INFO - _serve:93 - Finished server process [51752]
+2025-05-28 00:15:58,342 - uvicorn.error - INFO - _serve:83 - Started server process [8584]
+2025-05-28 00:15:58,342 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-28 00:15:58,343 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-28 00:15:58,343 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-28 00:16:03,295 - uvicorn.access - INFO - send:473 - 127.0.0.1:54534 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:03,362 - uvicorn.access - INFO - send:473 - 127.0.0.1:54535 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:16:07,846 - uvicorn.access - INFO - send:473 - 127.0.0.1:54537 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:07,889 - uvicorn.access - INFO - send:473 - 127.0.0.1:54538 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:16:19,096 - uvicorn.access - INFO - send:473 - 127.0.0.1:54541 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:19,124 - uvicorn.access - INFO - send:473 - 127.0.0.1:54542 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:19,161 - uvicorn.access - INFO - send:473 - 127.0.0.1:54543 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:16:39,267 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-28 00:16:39,376 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-28 00:16:39,376 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-28 00:16:39,377 - uvicorn.error - INFO - _serve:93 - Finished server process [8584]
+2025-05-28 00:16:50,333 - uvicorn.error - INFO - _serve:83 - Started server process [49392]
+2025-05-28 00:16:50,334 - uvicorn.error - INFO - startup:48 - Waiting for application startup.
+2025-05-28 00:16:50,334 - uvicorn.error - INFO - startup:62 - Application startup complete.
+2025-05-28 00:16:50,335 - uvicorn.error - INFO - _log_started_message:215 - Uvicorn running on http://127.0.0.1:8081 (Press CTRL+C to quit)
+2025-05-28 00:16:55,214 - uvicorn.access - INFO - send:473 - 127.0.0.1:54561 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:55,252 - uvicorn.access - INFO - send:473 - 127.0.0.1:54562 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:16:59,046 - uvicorn.access - INFO - send:473 - 127.0.0.1:54563 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:59,079 - uvicorn.access - INFO - send:473 - 127.0.0.1:54564 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:16:59,123 - uvicorn.access - INFO - send:473 - 127.0.0.1:54565 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:59,163 - uvicorn.access - INFO - send:473 - 127.0.0.1:54566 - "GET /status HTTP/1.1" 200
+2025-05-28 00:16:59,200 - uvicorn.access - INFO - send:473 - 127.0.0.1:54567 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:17:09,414 - uvicorn.access - INFO - send:473 - 127.0.0.1:54568 - "GET /status HTTP/1.1" 200
+2025-05-28 00:17:09,464 - uvicorn.access - INFO - send:473 - 127.0.0.1:54569 - "POST /score_headlines HTTP/1.1" 200
+2025-05-28 00:17:21,277 - uvicorn.error - INFO - shutdown:263 - Shutting down
+2025-05-28 00:17:21,390 - uvicorn.error - INFO - shutdown:67 - Waiting for application shutdown.
+2025-05-28 00:17:21,390 - uvicorn.error - INFO - shutdown:76 - Application shutdown complete.
+2025-05-28 00:17:21,390 - uvicorn.error - INFO - _serve:93 - Finished server process [49392]
