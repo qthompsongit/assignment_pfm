@@ -1,3 +1,4 @@
+# pylint: disable=E0401
 """
 This file contains the tests necessary to push code to main,
 and eventually production, for this assignment.
@@ -8,12 +9,11 @@ and eventually production, for this assignment.
 import sys
 import os
 
-from fastapi.testclient import TestClient
-
-from score_headlines_api_personal import app
-
-# Add parent directory (where `score_headlines_api_personal.py` is) to sys.path
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from fastapi.testclient import TestClient  # pylint: disable=wrong-import-position
+from score_headlines_api_personal import app  # pylint: disable=wrong-import-position
+
 
 
 
