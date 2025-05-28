@@ -30,4 +30,5 @@ jobs:
               --name score_headlines_app_personal \
               -p 8081:8081 \
               -p 9081:9081 \
+              -v /opt/assignment_outputs:/app/results \
               ${{ secrets.DOCKER_USERNAME }}/score_headlines_app_personal:latest
