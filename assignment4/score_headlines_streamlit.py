@@ -24,6 +24,7 @@ uvicorn score_headlines_api:app --host 127.0.0.1 --port 8081
 import requests
 import streamlit as st
 
+#Setting up the base markdown text for the streamlit page
 st.markdown("# Scoring Headlines")
 
 st.markdown("""
@@ -38,16 +39,17 @@ st.markdown(""" ## Headline Tone Evaluator""")
 st.markdown(""" Write your headline in the text boxes and click enter: """)
 
 
-#st.write(st.session_state)
 if 'headline_list' not in st.session_state:
     st.session_state.headline_list = ["test headline"]
 
+#Adding delete logic to the streamlit page
 delete_index = st.session_state.get("delete_index", None)
 if delete_index is not None:
     if 0 <= delete_index < len(st.session_state.headline_list):
         st.session_state.headline_list.pop(delete_index)
     st.session_state.delete_index = None
 
+#Set up the addable/deletable text options
 for i, val in enumerate(st.session_state.headline_list):
     cols = st.columns([6, 1])
     new_val = cols[0].text_input(f"Item {i+1}", value=val, key=f"input_{i}")
@@ -57,6 +59,7 @@ for i, val in enumerate(st.session_state.headline_list):
         st.session_state.delete_index = i
         st.rerun()
 
+#Adding another headline to read
 if st.button("+ Add more elements"):
     st.session_state.headline_list.append("test headline")
     st.rerun()
@@ -64,11 +67,12 @@ if st.button("+ Add more elements"):
 
 st.markdown("""Your headlines, and their sentiments, will be displayed below:""")
 
+#Sending the post request to check the headline
 response = requests.post(url="http://127.0.0.1:8081/score_headlines",\
     json = {'headlines':st.session_state['headline_list']}, timeout=10)
 headline_tonalities = response.json()['labels']
 
-
+#Print the results for each added headline
 for item_index in reversed(range(len(st.session_state['headline_list']))):
     st.markdown("## Headline: "+st.session_state['headline_list'][item_index])
     st.markdown("### Tone: "+headline_tonalities[item_index])

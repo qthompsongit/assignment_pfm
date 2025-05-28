@@ -47,7 +47,7 @@ with open("score_headline_logging.json", "r", encoding="utf-8") as f:
 
 
 fname = os.path.basename(__file__)
-log = logging.getLogger(fname)  # <= This lines makes the logger name more useful
+log = logging.getLogger(fname)
 # Loading the respective models
 log.info("Loading the sentence transformer model.")
 sentence_vector_transformer_model = SentenceTransformer("/opt/huggingface_models/all-MiniLM-L6-v2")
@@ -55,21 +55,19 @@ log.info("Loading the headline tone reading model.")
 headline_scoring_model = joblib.load("svm.joblib")
 
 app = FastAPI()
-# Check the status of the webservice
 @app.get("/status")
 def status():
     """
     Returns the status of the REST API web service via a python dictionary.
 
-    Returns: A python dictionary containing status and OK.
+    Returns: A python dictionary containing status and OK if the web api is online.
     """
     log.debug("Status checking")
     d = {"status": "OK"}
     return d
 
 
-# pylint: disable=too-few-public-methods
-# A class to store post request information to be used with our models
+
 class HeadlineData(BaseModel):
     """
     A class which contains the expected values necessary to
@@ -84,7 +82,6 @@ class HeadlineData(BaseModel):
 
 
 @app.post("/score_headlines")
-# Score tonality of provided headlines
 def score_headlines(client_props: HeadlineData):
     """
     A function which takes in a list of headlines provided by the client via
@@ -98,17 +95,16 @@ def score_headlines(client_props: HeadlineData):
 
     """
     log.info("Scoring Headlines function called.")
-    log.debug("Received the following headlines: %s.", client_props.headlines)
+    log.debug(f"Received the following headlines: {client_props.headlines}.")
     my_headline_predictions = []
     model_vector_embeddings = sentence_vector_transformer_model.encode(client_props.headlines)
+
     # Running and capturing the prediction for each headline
     for headline_index, headline_received in enumerate(model_vector_embeddings):
         scoring_model_prediction = headline_scoring_model.predict(headline_received.reshape(1, -1))
         log.debug(
             f"Headline {client_props.headlines[headline_index]} \
-            at %d read as label: %s",
-            headline_index,
-            scoring_model_prediction,
+            at {headline_index} read as label: {scoring_model_prediction}"
         )
         my_headline_predictions.append(scoring_model_prediction[0])
     return {"labels": my_headline_predictions}
