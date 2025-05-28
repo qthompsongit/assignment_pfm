@@ -35,7 +35,7 @@ import json
 from datetime import date
 
 
-import joblib
+import joblib  # type: ignore
 from sentence_transformers import SentenceTransformer
 from fastapi import FastAPI
 from pydantic import BaseModel
