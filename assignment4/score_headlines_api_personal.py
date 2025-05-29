@@ -62,6 +62,7 @@ else:
     # Fallback: download from Hugging Face, ONLY NECESSARY
     # IF THE MODEL DOES NOT EXIST ON THE SYSTEM RUNNING THIS PROGRAM
     sentence_vector_transformer_model = SentenceTransformer("all-MiniLM-L6-v2")
+
 log.info("Loading the headline tone reading model.")
 headline_scoring_model = joblib.load("svm.joblib")
 
@@ -130,11 +131,11 @@ def score_headlines(client_props: HeadlineData):
 
 
     if os.path.exists(f"./results/{existing_file_path_check}"):
-        with open(f"./results/{existing_file_path_check}", "a+", encoding="utf-8") as file:
+        with open(f"./results/quinn_thompson_{existing_file_path_check}", "a+", encoding="utf-8") as file:
             for prediction_index, prediction_value in enumerate(my_headline_predictions, start=0):
                 file.write(str(prediction_value) + "," + str(client_props.headlines[prediction_index])+"\n")
     else:
-        with open(f"./results/{existing_file_path_check}", "w", encoding="utf-8") as file:
+        with open(f"./results/quinn_thompson_{existing_file_path_check}", "w", encoding="utf-8") as file:
             for prediction_index, prediction_value in enumerate(my_headline_predictions, start=0):
                 file.write(str(prediction_value) + "," + str(client_props.headlines[prediction_index])+"\n")
     return {"labels": my_headline_predictions}
