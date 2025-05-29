@@ -26,7 +26,7 @@ jobs:
             docker rm score_headlines_app_personal || true
 
             # Run the updated image, this is a test commit, second test, third test check, fourth check
-            # for the force commit
+            # for the force commit, fifth commit check
             docker run -d \
               --name score_headlines_app_personal \
               -p 8081:8081 \
