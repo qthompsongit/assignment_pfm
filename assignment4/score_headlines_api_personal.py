@@ -54,8 +54,6 @@ log = logging.getLogger(fname)
 
 log.info("Loading the sentence transformer model.")
 
-sentence_vector_transformer_model = SentenceTransformer("/opt/huggingface/all-MiniLM-L6-v2")
-
 MODEL_PATH = "/opt/huggingface_models/all-MiniLM-L6-v2"
 
 if os.path.exists(MODEL_PATH):
