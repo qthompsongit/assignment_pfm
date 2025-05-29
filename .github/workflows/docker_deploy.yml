@@ -25,7 +25,8 @@ jobs:
             docker stop score_headlines_app_personal || true
             docker rm score_headlines_app_personal || true
 
-            # Run the updated image, this is a test commit, second test, third test check
+            # Run the updated image, this is a test commit, second test, third test check, fourth check
+            # for the force commit
             docker run -d \
               --name score_headlines_app_personal \
               -p 8081:8081 \
